@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWOT Analysis Tool</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/superhero/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+</head>
+<body>
+    <div class="container py-3">
+        <h1 class="text-center mb-4">SWOT Analysis Tool</h1>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-info text-white">Strengths</div>
+                    <div class="card-body">
+                        <textarea id="strengths" class="form-control" rows="5" placeholder="List your internal advantages, skills, resources, or positive attributes here..."></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">Weaknesses</div>
+                    <div class="card-body">
+                        <textarea id="weaknesses" class="form-control" rows="5" placeholder="List your internal disadvantages, limitations, or areas for improvement here..."></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-success text-white">Opportunities</div>
+                    <div class="card-body">
+                        <textarea id="opportunities" class="form-control" rows="5" placeholder="List external factors or situations that could positively impact you here..."></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-danger text-white">Threats</div>
+                    <div class="card-body">
+                        <textarea id="threats" class="form-control" rows="5" placeholder="List external factors or risks that could negatively impact you here..."></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mb-3">
+            <p>Save and load your progress as YAML. Analyze your YAML file with the SWOT - GROW Planner GPT:</p>
+        </div>
+        <div class="btn-group-container">
+            <button id="saveBtn" class="btn btn-secondary">Save as YAML</button>
+            <label for="loadFile" class="btn btn-secondary">Load YAML</label>
+            <input type="file" id="loadFile" accept=".yaml">
+            <button type="button" onclick="window.open('https://chatgpt.com/g/g-675bcc6e32b48191be90b0b772c392e3-swot-grow-planner', '_blank')" class="btn btn-dark">SWOT - GROW Planner</button>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
